@@ -16,18 +16,8 @@ namespace EdenMusicMog
         [DefaultValue(true)]
         public bool ImmersiveBossSongs;
 
-        [DefaultValue(true)]
-        public bool DreamMusic;
-
-        [DefaultValue(true)]
-        public bool ItsBrin;
-
-        [DefaultValue(true)]
         [ReloadRequired]
         public bool OverrideModdedMusicBoxes;
-
-        [DefaultValue(true)]
-        public bool CopyrightMode;
 
         [Header("$Mods.EdenMusicMog.Configs.MusicConfig.Headers.VanillaMusicOverrides")]
 
@@ -152,12 +142,6 @@ namespace EdenMusicMog
         }
 
         [DefaultValue(true)]
-        public bool OverrideLunarPillarsTheme
-        {
-            get; set;
-        }
-
-        [DefaultValue(true)]
         public bool OverrideMoonLordTheme
         {
             get; set;
@@ -187,7 +171,6 @@ namespace EdenMusicMog
                 OverrideDukeFishronTheme &&
                 OverrideEmpressOfLightTheme &&
                 OverrideLunaticCultistTheme &&
-                OverrideLunarPillarsTheme &&
                 OverrideMoonLordTheme;
             }
             set
@@ -211,7 +194,6 @@ namespace EdenMusicMog
                 OverrideDukeFishronTheme = value;
                 OverrideEmpressOfLightTheme = value;
                 OverrideLunaticCultistTheme = value;
-                OverrideLunarPillarsTheme = value;
                 OverrideMoonLordTheme = value;
             }
         }
@@ -243,49 +225,7 @@ namespace EdenMusicMog
         }
 
         [DefaultValue(true)]
-        public bool OverrideTimberChampionTheme
-        {
-            get; set;
-        }
-
-        [DefaultValue(true)]
-        public bool OverrideTerraChampionTheme
-        {
-            get; set;
-        }
-
-        [DefaultValue(true)]
-        public bool OverrideNatureChampionTheme
-        {
-            get; set;
-        }
-
-        [DefaultValue(true)]
-        public bool OverrideLifeChampionTheme
-        {
-            get; set;
-        }
-
-        [DefaultValue(true)]
-        public bool OverrideShadowChampionTheme
-        {
-            get; set;
-        }
-
-        [DefaultValue(true)]
-        public bool OverrideEarthChampionTheme
-        {
-            get; set;
-        }
-
-        [DefaultValue(true)]
-        public bool OverrideSpiritChampionTheme
-        {
-            get; set;
-        }
-
-        [DefaultValue(true)]
-        public bool OverrideWillChampionTheme
+        public bool OverrideChampionThemes
         {
             get; set;
         }
@@ -309,12 +249,6 @@ namespace EdenMusicMog
         }
 
         [DefaultValue(true)]
-        public bool MutantFtwZzz
-        {
-            get; set;
-        }
-
-        [DefaultValue(true)]
         public bool ToggleAllSoulsMusicOverrides
         {
             get
@@ -324,18 +258,10 @@ namespace EdenMusicMog
                 OverrideDevianttTheme &&
                 OverrideBanishedBaronTheme &&
                 OverrideLifelightTheme &&
-                OverrideTimberChampionTheme &&
-                OverrideTerraChampionTheme &&
-                OverrideNatureChampionTheme &&
-                OverrideLifeChampionTheme &&
-                OverrideShadowChampionTheme &&
-                OverrideEarthChampionTheme &&
-                OverrideSpiritChampionTheme &&
-                OverrideWillChampionTheme &&
+                OverrideChampionThemes &&
                 OverrideEridanusTheme &&
                 OverrideAbominationnTheme &&
-                OverrideMutantTheme &&
-                MutantFtwZzz;
+                OverrideMutantTheme;
             }
             set
             {
@@ -344,18 +270,10 @@ namespace EdenMusicMog
                 OverrideDevianttTheme = value;
                 OverrideBanishedBaronTheme = value;
                 OverrideLifelightTheme = value;
-                OverrideTimberChampionTheme = value;
-                OverrideTerraChampionTheme = value;
-                OverrideNatureChampionTheme = value;
-                OverrideLifeChampionTheme = value;
-                OverrideShadowChampionTheme = value;
-                OverrideEarthChampionTheme = value;
-                OverrideSpiritChampionTheme = value;
-                OverrideWillChampionTheme = value;
+                OverrideChampionThemes = value;
                 OverrideEridanusTheme = value;
                 OverrideAbominationnTheme = value;
                 OverrideMutantTheme = value;
-                MutantFtwZzz = value;
             }
         }
 

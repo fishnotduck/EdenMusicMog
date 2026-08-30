@@ -32,13 +32,13 @@ namespace EdenMusicMog
             {
                 TryMapMusic(
                     MusicLoader.GetMusicSlot(musicMod, "Assets/Music/Baron"),
-                    "BREISXVsZeroDecisiveBattle2",
-                    "BREIS ~ X Vs Zero Decisive Battle 2"
+                    "skyxxxxdays",
+                    "ZeroRanger - Sky XXXX Days"
                 );
                 TryMapMusic(
                     MusicLoader.GetMusicSlot(musicMod, "Assets/Music/Baron2"),
-                    "BREISXVsZeroDecisiveBattle2",
-                    "BREIS ~ X Vs Zero Decisive Battle 2"
+                    "skyxxxxdays",
+                    "ZeroRanger - Sky XXXX Days"
                 );
                 // Store the combined Champions slot for special-casing in the
                 // music override logic. Do NOT map it to a single song here;
@@ -47,58 +47,58 @@ namespace EdenMusicMog
                 ChampionsSlot = MusicLoader.GetMusicSlot(musicMod, "Assets/Music/Champions");
                 TryMapMusic(
                     MusicLoader.GetMusicSlot(musicMod, "Assets/Music/Laevateinn_P1"),
-                    "Showdown",
-                    "Project Wingman ~ Showdown"
+                    "yourcontracthasexpired",
+                    "A Hat in Time - Your Contract Has Expired"
                 );
                 TryMapMusic(
                     MusicLoader.GetMusicSlot(musicMod, "Assets/Music/Laevateinn_P2"),
-                    "Showdown",
-                    "Project Wingman ~ Showdown"
+                    "yourcontracthasexpired",
+                    "A Hat in Time - Your Contract Has Expired"
                 );
                 TryMapMusic(
                     MusicLoader.GetMusicSlot(musicMod, "Assets/Music/LieFlightNoCum"),
-                    "SEQUELcolonyKizuato",
-                    "SEQUEL colony ~ Kizuato"
+                    "waifu4laifu",
+                    "Outcore - Waifu 4 Laifu"
                 );
                 TryMapMusic(
                     MusicLoader.GetMusicSlot(musicMod, "Assets/Music/PlatinumStar"),
-                    "SuddenDeath",
-                    "Rabi-Ribi ~ Sudden Death"
+                    "despair",
+                    "ZeroRanger - Despair"
                 );
                 TryMapMusic(
                     MusicLoader.GetMusicSlot(musicMod, "Assets/Music/SteelRed"),
-                    "SupremeRulersCoronationOVERLORD",
-                    "Kirby RTDL Deluxe ~ Supreme Ruler's Coronation - OVERLORD"
+                    "voidthesky",
+                    "Void Stranger - Void the Sky"
                 );
                 TryMapMusic(
                     MusicLoader.GetMusicSlot(musicMod, "Assets/Music/Strawberry_Sparkly_Sunrise"),
-                    "UsagiFlap",
-                    "Blue Archive ~ Usagi Flap"
+                    "captaintutorial",
+                    "Outcore - Captain Tutorial"
                 );
                 TryMapMusic(
                     MusicLoader.GetMusicSlot(musicMod, "Assets/Music/Storia"),
-                    "BattleTrialsGlory",
-                    "Zenless Zone Zero ~ Battle Trials (Glory)"
+                    "voidthesky",
+                    "Void Stranger - Void the Sky"
                 );
                 TryMapMusic(
                     MusicLoader.GetMusicSlot(musicMod, "Assets/Music/TrojanSquirrel"),
-                    "HoloCureSuspect",
-                    "HoloCure ~ Suspect"
+                    "vampiresinvadingheaven",
+                    "Everhood - Vampires Invading Heaven"
                 );
                 TryMapMusic(
                     MusicLoader.GetMusicSlot(musicMod, "Assets/Music/WillChampion"),
-                    "MamoruKunHasBeenCursedWillForce",
-                    "Mamoru-kun Wa Norowarete Shimatta! ~ Will Force"
+                    "workingmanstheme",
+                    "Serial Experiments Lain - Working Man's Theme"
                 );
                 TryMapMusic(
                     MusicLoader.GetMusicSlot(musicMod, "Assets/Music/rePrologue"),
-                    "SupremeRulersCoronationOVERLORD",
-                    "Kirby RTDL Deluxe ~ Supreme Ruler's Coronation - OVERLORD"
+                    "voidthesky",
+                    "Void Stranger - Void the Sky"
                 );
                 TryMapMusic(
                     MusicLoader.GetMusicSlot(musicMod, "Assets/Music/ShiftingSands"),
-                    "ShiftingSandLand",
-                    "Super Mario 64 ~ Shifting Sand Land"
+                    "freezone",
+                    "Serial Experiments Lain - Free Zone"
                 );
             }
         }

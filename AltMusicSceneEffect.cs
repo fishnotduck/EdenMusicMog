@@ -63,17 +63,6 @@ namespace EdenMusicMog
             return (rectangle.Intersects(value));
         }
 
-        public static NPC FirstPillarInRange()
-        {
-            int[] pillarTypes = [
-                NPCID.LunarTowerSolar,
-                NPCID.LunarTowerVortex,
-                NPCID.LunarTowerNebula,
-                NPCID.LunarTowerStardust,
-            ];
-            return Main.npc.FirstOrDefault(npc => npc.active && pillarTypes.Contains(npc.type), null);
-        }
-
     }
 
     public class VanillaMusic : ModSystem
@@ -1097,15 +1086,6 @@ namespace EdenMusicMog
         public override string DisplayMusicName => "Hylics 2 - That's a Big Stick";
     }
 
-    class Pillars : MusicEffect
-    {
-        public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "lookmaiflynow";
-        public override bool MyMusicConfig => MusicConfig.Instance.OverrideLunarPillarsTheme;
-        public override NPC TryGetActiveNPC => MusicUtils.FirstPillarInRange();
-        public override string DisplayMusicName => "Hylics 2 - Look Ma, I Fly Now!";
-    }
-
     class MoonLord : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
@@ -1119,7 +1099,7 @@ namespace EdenMusicMog
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
         public override string MusicName => "workingmanstheme";
-        public override bool MyMusicConfig => MusicConfig.Instance.OverrideTimberChampionTheme;
+        public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("TimberChampion");
         public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
@@ -1127,7 +1107,7 @@ namespace EdenMusicMog
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
         public override string MusicName => "workingmanstheme";
-        public override bool MyMusicConfig => MusicConfig.Instance.OverrideTimberChampionTheme;
+        public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("TimberChampionHead");
         public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
@@ -1136,7 +1116,7 @@ namespace EdenMusicMog
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
         public override string MusicName => "workingmanstheme";
-        public override bool MyMusicConfig => MusicConfig.Instance.OverrideTerraChampionTheme;
+        public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("TerraChampion");
         public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
@@ -1145,7 +1125,7 @@ namespace EdenMusicMog
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
         public override string MusicName => "workingmanstheme";
-        public override bool MyMusicConfig => MusicConfig.Instance.OverrideNatureChampionTheme;
+        public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("NatureChampion");
         public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
@@ -1154,7 +1134,7 @@ namespace EdenMusicMog
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
         public override string MusicName => "workingmanstheme";
-        public override bool MyMusicConfig => MusicConfig.Instance.OverrideLifeChampionTheme;
+        public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("LifeChampion");
         public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
@@ -1163,7 +1143,7 @@ namespace EdenMusicMog
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
         public override string MusicName => "workingmanstheme";
-        public override bool MyMusicConfig => MusicConfig.Instance.OverrideShadowChampionTheme;
+        public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("ShadowChampion");
         public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
@@ -1172,7 +1152,7 @@ namespace EdenMusicMog
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
         public override string MusicName => "workingmanstheme";
-        public override bool MyMusicConfig => MusicConfig.Instance.OverrideEarthChampionTheme;
+        public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("EarthChampion");
         public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
@@ -1181,7 +1161,7 @@ namespace EdenMusicMog
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
         public override string MusicName => "workingmanstheme";
-        public override bool MyMusicConfig => MusicConfig.Instance.OverrideSpiritChampionTheme;
+        public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("SpiritChampion");
         public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
@@ -1190,7 +1170,7 @@ namespace EdenMusicMog
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
         public override string MusicName => "workingmanstheme";
-        public override bool MyMusicConfig => MusicConfig.Instance.OverrideWillChampionTheme;
+        public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("WillChampion");
         public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }

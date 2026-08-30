@@ -1,4 +1,6 @@
-﻿using System;
+﻿using JetBrains.Annotations;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -23,6 +25,18 @@ namespace EdenMusicMog
 
         public static int OverrideMusicID(int i)
         {
+            Player player = Main.LocalPlayer;
+
+            if (NPC.LunarApocalypseIsUp)
+            {
+                int old2 = i;
+                i = GetMusic("lookmaiflynow");
+                TerryMusicSystem.nowPlayingString = "Hylics 2 - Look Ma, I Fly Now!";
+                if (i >= Main.musicFade.Length)
+                    return old2;
+                return i;
+            }
+
             if (Main.gameMenu)
                 return i;
             int old = i;
@@ -30,297 +44,283 @@ namespace EdenMusicMog
             switch (i)
             {
                 case MusicID.TownDay:
-                    i = GetMusic("Natsucore214");
-                    TerryMusicSystem.nowPlayingString = "Blue Archive ~ OST 214";
+                    i = GetMusic("tosya");
+                    TerryMusicSystem.nowPlayingString = "Z.A.T.O. - Tosya";
                     break;
 
                 case MusicID.TownNight:
-                    i = GetMusic("BlueArchive198");
-                    TerryMusicSystem.nowPlayingString = "Blue Archive ~ OST 198";
+                    i = GetMusic("mesmermaladyandmirphie");
+                    TerryMusicSystem.nowPlayingString = "Mesmalie - Mesmer, Malady & Mirphie";
                     break;
 
                 case MusicID.OverworldDay:
-                case MusicID.AltOverworldDay:
-                    if (config.DreamMusic)
-                    {
-                        i = GetMusic("TranceMusicForRacingGame");
-                        TerryMusicSystem.nowPlayingString = "He Is Just Very Lucky ~ Trance Music For Racing Game";
-                    }
-                    else
-                    {
-                        i = GetMusic("MischievousStep");
-                        TerryMusicSystem.nowPlayingString = "Blue Archive ~ Mischievous Step";
-                    }
+                    i = GetMusic("thewoodsbehindherhouse");
+                    TerryMusicSystem.nowPlayingString = "Mesmalie - The Woods behind her house";
                     break;
 
                 case MusicID.Night:
-                    i = GetMusic("BeneathTheMask");
-                    TerryMusicSystem.nowPlayingString = "Persona 5 ~ Beneath the Mask";
+                    i = GetMusic("thegloominsidethewoodsbehindherhouse");
+                    TerryMusicSystem.nowPlayingString = "Mesmalie - The Gloom inside the Woods behind her House";
                     break;
 
                 case MusicID.WindyDay:
-                    if (config.CopyrightMode)
-                    {
-                        i = GetMusic("FoolishDays");
-                        TerryMusicSystem.nowPlayingString = "Blue Archive ~ Foolish Days";
-                    }
-                    else
-                    {
-                        i = GetMusic("LiteralClownMusic");
-                        TerryMusicSystem.nowPlayingString = "Actual Literal Clown Music";
-                    }
+                    if (player.townNPCs > 2f)
+                        goto case MusicID.TownDay;
+                    if (player.ZoneHallow)
+                        goto case MusicID.TheHallow;
+                    else 
+                        goto case MusicID.OverworldDay;
                     break;
 
                 case MusicID.Underground:
                 case MusicID.AltUnderground:
-                    i = GetMusic("SlipperySteps");
-                    TerryMusicSystem.nowPlayingString = "Kirby's Return to Dream Land ~ Slippery Steps";
-                    break;
+                    if (player.ZoneRockLayerHeight)
+                    {
+                        i = GetMusic("adastra");
+                        TerryMusicSystem.nowPlayingString = "Void Stranger - ...ad astra";
+                        break;
+                    }
+                    else
+                    {
+                        i = GetMusic("voidsymphony");
+                        TerryMusicSystem.nowPlayingString = "Void Stranger - Void Symphony";
+                        break;
+                    }
 
                 case MusicID.Desert:
+                    i = GetMusic("lookingforthebossreprise");
+                    TerryMusicSystem.nowPlayingString = "ENA: Dream BBQ - Looking for the Boss (Reprise)";
+                    break;
+
                 case MusicID.UndergroundDesert:
-                    i = GetMusic("RockStar");
-                    TerryMusicSystem.nowPlayingString = "Kirby 64 ~ Rock Star";
+                    i = GetMusic("mainmenutheme");
+                    TerryMusicSystem.nowPlayingString = "ENA: Dream BBQ - Main Menu Theme";
                     break;
 
                 case MusicID.Snow:
+                    i = GetMusic("moonsetter");
+                    TerryMusicSystem.nowPlayingString = "Homestuck - Moonsetter";
+                    break;
+
                 case MusicID.Ice:
-                    i = GetMusic("FrozenHillside");
-                    TerryMusicSystem.nowPlayingString = "Kirby Air Ride ~ Frozen Hillside";
+                    i = GetMusic("moonslammer");
+                    TerryMusicSystem.nowPlayingString = "Spoofymaru - Moonslammer";
                     break;
 
                 case MusicID.Jungle:
                 case MusicID.JungleNight:
-                    if (config.ItsBrin)
-                    {
-                        i = GetMusic("MattMVSNewZeldaForestTempleMusicITSBRIN");
-                        TerryMusicSystem.nowPlayingString = "Matt MVS ~ New Zelda Forest Temple Music (IT'S BRIN)";
-                    }
-                    else
-                    {
-                        goto case MusicID.JungleUnderground;
-                    }
+                    i = GetMusic("crystalguitarthemums");
+                    TerryMusicSystem.nowPlayingString = "Homestuck - Crystalguitarthemums";
                     break;
 
                 case MusicID.JungleUnderground:
-                    i = GetMusic("Brinstar");
-                    TerryMusicSystem.nowPlayingString = "Super Metroid ~ Brinstar";
+                    i = GetMusic("Crystalanthemums");
+                    TerryMusicSystem.nowPlayingString = "Homestuck - Crystalanthemums";
                     break;
 
                 case MusicID.TheHallow:
-                    i = GetMusic("SkyHighBridge");
-                    TerryMusicSystem.nowPlayingString = "Rabi-Ribi ~ Sky High Bridge";
-                    break;
-
                 case MusicID.UndergroundHallow:
-                    i = GetMusic("WarpDestination");
-                    TerryMusicSystem.nowPlayingString = "Rabi-Ribi ~ Warp Destination";
+                    i = GetMusic("jokziozo");
+                    TerryMusicSystem.nowPlayingString = "corru.observer - JOKZI OZO";
                     break;
 
                 case MusicID.Corruption:
-                    i = GetMusic("WorldOfNothing");
-                    TerryMusicSystem.nowPlayingString = "Super Paper Mario ~ World of Nothing";
+                    i = GetMusic("safesurface");
+                    TerryMusicSystem.nowPlayingString = "corru.observer - Safe Surface";
                     break;
 
                 case MusicID.UndergroundCorruption:
-                    i = GetMusic("RiverTwygzBed");
-                    TerryMusicSystem.nowPlayingString = "Super Paper Mario ~ River Twygz Bed";
+                    i = GetMusic("ambition");
+                    TerryMusicSystem.nowPlayingString = "corru.observer - Ambition";
                     break;
 
                 case MusicID.Crimson:
-                    i = GetMusic("ZeroMissionTourianKassil");
-                    TerryMusicSystem.nowPlayingString = "Metroid Zero Mission ~ Tourian (Arranged by Kassil)";
+                    i = GetMusic("outsideinterference");
+                    TerryMusicSystem.nowPlayingString = "corru.observer - Outside Interference";
                     break;
 
                 case MusicID.UndergroundCrimson:
-                    i = GetMusic("SuperMetroidTourian");
-                    TerryMusicSystem.nowPlayingString = "Super Metroid ~ Tourian";
+                    i = GetMusic("innerworld");
+                    TerryMusicSystem.nowPlayingString = "corru.observer - Inner World";
                     break;
 
                 case MusicID.Ocean:
-                    i = GetMusic("WateryGraves");
-                    TerryMusicSystem.nowPlayingString = "Plants vs Zombies ~ Watery Graves";
-                    break;
-
                 case MusicID.OceanNight:
-                    i = GetMusic("LowerSector4Kassil");
-                    TerryMusicSystem.nowPlayingString = "Metroid Fusion ~ Lower Sector 4 (Arranged by Kassil)";
+                    i = GetMusic("thehub");
+                    TerryMusicSystem.nowPlayingString = "corru.observer - The Hub";
                     break;
 
                 case MusicID.Space:
                 case MusicID.SpaceDay:
-                    if (config.CopyrightMode)
-                    {
-                        i = GetMusic("AuroraPalace");
-                        TerryMusicSystem.nowPlayingString = "Rabi-Ribi ~ Aurora Palace";
-                    }
-                    else
-                    {
-                        i = GetMusic("ShadyShady");
-                        TerryMusicSystem.nowPlayingString = "Sakuzyo ~ ShadyShady";
-                    }
+                    i = GetMusic("breakingfree");
+                    TerryMusicSystem.nowPlayingString = "corru.observer - Breaking Free";
                     break;
 
                 case MusicID.Hell:
-                    i = GetMusic("TheOnlyThingTheyFearIsYou");
-                    TerryMusicSystem.nowPlayingString = "DOOM Eternal ~ The Only Thing They Fear Is You";
+                    i = GetMusic("crematorium");
+                    TerryMusicSystem.nowPlayingString = "White Knuckle - Crematorium";
                     break;
 
                 case MusicID.Mushrooms:
-                    i = GetMusic("AfterSchoolDessert");
-                    TerryMusicSystem.nowPlayingString = "Blue Archive ~ After School Dessert";
+                    i = GetMusic("ratcastle");
+                    TerryMusicSystem.nowPlayingString = "glass beach - (rat castle)";
                     break;
 
                 case MusicID.Dungeon:
-                    i = GetMusic("CastleBleck");
-                    TerryMusicSystem.nowPlayingString = "Super Paper Mario ~ Castle Bleck";
+                    i = GetMusic("unreasonablebehaviour");
+                    TerryMusicSystem.nowPlayingString = "OFF - Unreasonable Behaviour";
                     break;
 
                 case MusicID.Temple:
-                    i = GetMusic("WanderingGhosts");
-                    TerryMusicSystem.nowPlayingString = "Castlevania Symphony of the Night ~ Wandering Ghosts";
+                    i = GetMusic("crystamanthequins");
+                    TerryMusicSystem.nowPlayingString = "Homestuck - Crystamanthequins";
                     break;
 
                 case MusicID.Rain:
                 case MusicID.MorningRain:
-                    i = GetMusic("UnfamiliarPlace");
-                    TerryMusicSystem.nowPlayingString = "Rabi-Ribi ~ Unfamiliar Place";
+                    i = GetMusic("rainanddust");
+                    TerryMusicSystem.nowPlayingString = "Star Fetchers - Rain and Dust";
                     break;
 
                 case MusicID.Monsoon:
-                    i = GetMusic("BlueArchive202");
-                    TerryMusicSystem.nowPlayingString = "Blue Archive ~ OST 202";
+                    i = GetMusic("raindrops");
+                    TerryMusicSystem.nowPlayingString = "Set Yourself on Fire - Raindrops";
                     break;
 
                 case MusicID.Graveyard:
-                    i = GetMusic("GestaltAngst");
-                    TerryMusicSystem.nowPlayingString = "Blue Archive ~ Gestalt Angst";
+                    i = GetMusic("mistofadifferentdimension");
+                    TerryMusicSystem.nowPlayingString = "Serial Experiments Lain - Mist of a Different Dimension";
                     break;
 
                 case MusicID.Eerie:
-                    i = GetMusic("StepOfTerror");
-                    TerryMusicSystem.nowPlayingString = "Blue Archive ~ Step of Terror";
-                    break;
+                    if (player.ZoneMeteor)
+                    {
+                        i = GetMusic("ruins");
+                        TerryMusicSystem.nowPlayingString = "Hylics - Ruins";
+                        break;
+                    }
+                    else
+                    {
+                        i = GetMusic("peppersteak");
+                        TerryMusicSystem.nowPlayingString = "OFF - Pepper Steak";
+                        break;
+                    }
 
                 case MusicID.Sandstorm:
-                    i = GetMusic("EndlessCarnival");
-                    TerryMusicSystem.nowPlayingString = "Blue Archive ~ Endless Carnival";
+                    i = GetMusic("pulsebeat");
+                    TerryMusicSystem.nowPlayingString = "Serial Experiments Lain - Pulse Beat";
                     break;
 
                 case MusicID.Shimmer:
-                    i = GetMusic("SongOfTheAncientsDuet");
-                    TerryMusicSystem.nowPlayingString = "NieR ~ Song of the Ancients (Duet)";
+                    i = GetMusic("tightrope");
+                    TerryMusicSystem.nowPlayingString = "Z.A.T.O. - Tightrope";
                     break;
 
                 case MusicID.GoblinInvasion:
-                    i = GetMusic("CamelliaGoldenWeekCombat");
-                    TerryMusicSystem.nowPlayingString = "Zenless Zone Zero ~ Camellia Golden Week (Combat)";
-                    break;
-
-                case MusicID.TheTowers:
-                    i = GetMusic("OurOath");
-                    TerryMusicSystem.nowPlayingString = "Blue Archive ~ Our Oath";
+                    i = GetMusic("skaianskirmish");
+                    TerryMusicSystem.nowPlayingString = "Homestuck - Skaian Skirmish";
                     break;
 
                 case MusicID.SlimeRain:
-                    i = GetMusic("UnwelcomeSchool");
-                    TerryMusicSystem.nowPlayingString = "Blue Archive ~ Unwelcome School";
+                    i = GetMusic("primarycolours");
+                    TerryMusicSystem.nowPlayingString = "Brutal Orchestra - Primary Colours";
                     break;
 
                 case MusicID.Boss1:
-                    i = GetMusic("XNautFortress");
-                    TerryMusicSystem.nowPlayingString = "Paper Mario TTYD ~ X-Naut Fortress";
+                    i = GetMusic("wriggleandwrithe");
+                    TerryMusicSystem.nowPlayingString = "Brutal Orchestra - Wriggle and Writhe";
                     break;
 
                 case MusicID.Boss2:
-                    i = GetMusic("DemetoriNecrofantasia");
-                    TerryMusicSystem.nowPlayingString = "Demetori ~ Necrofantasia";
+                    i = GetMusic("ruinousintnt");
+                    TerryMusicSystem.nowPlayingString = "corru.observer - RUINOUS INTNT";
                     break;
 
                 case MusicID.Boss3:
                     if (Main.invasionType == InvasionID.SnowLegion)
-                        goto case MusicID.SlimeRain;
-                    i = GetMusic("DiverseSystemNightmareParadiseAbridged");
-                    TerryMusicSystem.nowPlayingString = "Diverse System ~ Nightmare Paradise (Abridged)";
+                        goto case MusicID.FrostMoon;
+                    i = GetMusic("impact");
+                    TerryMusicSystem.nowPlayingString = "corru.observer - Impact";
                     break;
 
                 case MusicID.Boss4:
-                    i = GetMusic("Chokmah232");
-                    TerryMusicSystem.nowPlayingString = "Blue Archive ~ OST 232 (Chokmah)";
+                    i = GetMusic("incubusrising");
+                    TerryMusicSystem.nowPlayingString = "Brutal Orchestra - Incubus Rising";
                     break;
 
                 case MusicID.Boss5:
-                    i = GetMusic("RegnumCaelorumEtGehennaVerumCurNonAudimus");
-                    TerryMusicSystem.nowPlayingString = "Regnum Caelorum Et Gehenna ~ Verum Cur Non Audimus";
+                    i = GetMusic("sweetparalysis");
+                    TerryMusicSystem.nowPlayingString = "OMORI - Sweet Paralysis";
                     break;
 
                 case MusicID.Deerclops:
-                    i = GetMusic("NoHesitation");
-                    TerryMusicSystem.nowPlayingString = "Jujutsu Kaisen ~ No Hesitation (Abridged)";
+                    i = GetMusic("threestormsabovethemountainofsteam");
+                    TerryMusicSystem.nowPlayingString = "Brutal Orchestra - Three Storms Above the Mountain of Steam";
                     break;
 
                 case MusicID.QueenSlime:
-                    i = GetMusic("DededeDrumDashDeluxeCROWNED");
-                    TerryMusicSystem.nowPlayingString = "Dedede's Drum Dash Deluxe ~ C-R-O-W-N-E-D";
+                    i = GetMusic("bigbadbooty");
+                    TerryMusicSystem.nowPlayingString = "Outcore - Big Bad Booty";
                     break;
 
                 case MusicID.Plantera:
-                    i = GetMusic("Gekkasakuya");
-                    TerryMusicSystem.nowPlayingString = "Magia Record ~ Gekkasakuya";
+                    i = GetMusic("feistyflowers");
+                    TerryMusicSystem.nowPlayingString = "Everhood - Feisty Flowers";
                     break;
 
                 case MusicID.EmpressOfLight:
-                    i = GetMusic("BorderOfLifeResurrectionButterfly");
-                    TerryMusicSystem.nowPlayingString = "Touhou PCB ~ Border of Life / Resurrection Butterfly";
+                    i = GetMusic("teeheetime");
+                    TerryMusicSystem.nowPlayingString = "OMORI - Tee-hee Time";
                     break;
 
                 case MusicID.DukeFishron:
-                    i = GetMusic("CannonBallMythos");
-                    TerryMusicSystem.nowPlayingString = "Megaman Zero ~ Cannon Ball (Mythos)";
+                    i = GetMusic("skybluedays");
+                    TerryMusicSystem.nowPlayingString = "Void Stranger - S** **** ****";
                     break;
 
                 case MusicID.LunarBoss:
-                    i = GetMusic("FuryOfSet");
-                    TerryMusicSystem.nowPlayingString = "Blue Archive ~ FURY OF SET";
+                    i = GetMusic("fancymeatcomputer");
+                    TerryMusicSystem.nowPlayingString = "Hylics 2 - Fancy Meat Computer";
                     break;
 
                 case MusicID.PirateInvasion:
-                    i = GetMusic("DanDanInvader");
-                    TerryMusicSystem.nowPlayingString = "Blue Archive ~ DAN! DAN!! INVADER!!!";
+                    i = GetMusic("whatifwe");
+                    TerryMusicSystem.nowPlayingString = "Star Fetchers - What if we";
                     break;
 
                 case MusicID.Eclipse:
-                    i = GetMusic("RaisiKTheBattleThunderblunder777");
-                    TerryMusicSystem.nowPlayingString = "Raisi K. ~ The Battle (Theme of Thunderblunder777)";
+                    i = GetMusic("afinalduel");
+                    TerryMusicSystem.nowPlayingString = "Inscryption - A Final Duel";
                     break;
 
                 case MusicID.PumpkinMoon:
-                    i = GetMusic("KoyoiWaHalloweenNight");
-                    TerryMusicSystem.nowPlayingString = "HoloCure ~ Koyoi Wa Halloween Night!";
+                    i = GetMusic("akubattletheme");
+                    TerryMusicSystem.nowPlayingString = "The Battle Cats - Aku Battle Theme";
                     break;
 
                 case MusicID.FrostMoon:
-                    i = GetMusic("TtydBattleChapter7");
-                    TerryMusicSystem.nowPlayingString = "Paper Mario The Thousand Year Door ~ Combat (Chapter 7)";
+                    i = GetMusic("merrycd");
+                    TerryMusicSystem.nowPlayingString = "OMORI - MERRY CD";
                     break;
 
                 case MusicID.OldOnesArmy:
-                    i = GetMusic("OperationDOTABATA");
-                    TerryMusicSystem.nowPlayingString = "Blue Archive ~ Operation DOTABATA";
+                    i = GetMusic("battletheme1");
+                    TerryMusicSystem.nowPlayingString = "The Battle Cats - Battle Theme #1";
                     break;
 
                 case MusicID.MartianMadness:
-                    i = GetMusic("SystemInterior");
-                    TerryMusicSystem.nowPlayingString = "Rabi-Ribi ~ System Interior";
+                    i = GetMusic("intothefuturetheme1");
+                    TerryMusicSystem.nowPlayingString = "The Battle Cats - Into the Future Theme #1";
                     break;
 
                 case MusicID.Title:
                 case MusicID.MenuMusic:
                 case MusicID.Credits:
-                    i = GetMusic("ConstantModerato");
-                    TerryMusicSystem.nowPlayingString = "Blue Archive ~ Constant Moderato";
+                    i = GetMusic("systemendless");
+                    TerryMusicSystem.nowPlayingString = "ZeroRanger - System Endless";
                     break;
             }
+
             if (EdenMusicMog.Instance.moddedMusicDict.ContainsKey(i))
             {
                 var tuple = EdenMusicMog.Instance.moddedMusicDict[i];
@@ -333,42 +333,42 @@ namespace EdenMusicMog
             // and map to the matching internal music slot.
             if (MusicUtils.Souls != null && EdenMusicMog.Instance.ChampionsSlot != 0 && i == EdenMusicMog.Instance.ChampionsSlot)
             {
-                i = GetMusic("StardustSong");
+                i = GetMusic("workingmanstheme");
                 if (MusicUtils.FindClosestSoulsBoss("TimberChampion") != null || MusicUtils.FindClosestSoulsBoss("TimberChampionHead") != null)
                 {
-                    i = GetMusic("StardustSong");
+                    i = GetMusic("workingmanstheme");
                 }
                 else if (MusicUtils.FindClosestSoulsBoss("TerraChampion") != null)
                 {
-                    i = GetMusic("AriaLastBattle");
+                    i = GetMusic("workingmanstheme");
                 }
                 else if (MusicUtils.FindClosestSoulsBoss("NatureChampion") != null)
                 {
-                    i = GetMusic("MasahiroAokiFrostbite");
+                    i = GetMusic("workingmanstheme");
                 }
                 else if (MusicUtils.FindClosestSoulsBoss("LifeChampion") != null)
                 {
-                    i = GetMusic("conciliation");
+                    i = GetMusic("workingmanstheme");
                 }
                 else if (MusicUtils.FindClosestSoulsBoss("ShadowChampion") != null)
                 {
-                    i = GetMusic("ProteusRidley3");
+                    i = GetMusic("workingmanstheme");
                 }
                 else if (MusicUtils.FindClosestSoulsBoss("EarthChampion") != null)
                 {
-                    i = GetMusic("Pompey");
+                    i = GetMusic("workingmanstheme");
                 }
                 else if (MusicUtils.FindClosestSoulsBoss("SpiritChampion") != null)
                 {
-                    i = GetMusic("SketchesOfPain");
+                    i = GetMusic("workingmanstheme");
                 }
                 else if (MusicUtils.FindClosestSoulsBoss("WillChampion") != null)
                 {
-                    i = GetMusic("MamoruKunHasBeenCursedWillForce");
+                    i = GetMusic("workingmanstheme");
                 }
                 else if (MusicUtils.FindClosestSoulsBoss("CosmosChampion") != null)
                 {
-                    i = GetMusic("SuddenDeath");
+                    i = GetMusic("despair");
                 }
             }
             if (i >= Main.musicFade.Length)
