@@ -155,6 +155,7 @@ Configs: {
 		OverrideChampionThemes: {
 			Label: Override Champion Themes
 			Tooltip: If enabled, plays Serial Experiments Lain - Working Man's Theme.
+		}
 
 		OverrideEridanusTheme: {
 			Label: Override Eridanus Theme

@@ -25,6 +25,10 @@ namespace EdenMusicMog
 
         public static int OverrideMusicID(int i)
         {
+
+            if (Main.gameMenu)
+                return i;
+
             Player player = Main.LocalPlayer;
 
             if (NPC.LunarApocalypseIsUp)
@@ -37,8 +41,6 @@ namespace EdenMusicMog
                 return i;
             }
 
-            if (Main.gameMenu)
-                return i;
             int old = i;
             var config = MusicConfig.Instance;
             switch (i)
@@ -98,9 +100,18 @@ namespace EdenMusicMog
                     break;
 
                 case MusicID.Snow:
-                    i = GetMusic("moonsetter");
-                    TerryMusicSystem.nowPlayingString = "Homestuck - Moonsetter";
-                    break;
+                    if (Main.raining)
+                    {
+                        i = GetMusic("mnsttr");
+                        TerryMusicSystem.nowPlayingString = "nonomino - MnSttR";
+                        break;
+                    }
+                    else
+                    {
+                        i = GetMusic("moonsetter");
+                        TerryMusicSystem.nowPlayingString = "Homestuck - Moonsetter";
+                        break;
+                    }
 
                 case MusicID.Ice:
                     i = GetMusic("moonslammer");
@@ -114,7 +125,7 @@ namespace EdenMusicMog
                     break;
 
                 case MusicID.JungleUnderground:
-                    i = GetMusic("Crystalanthemums");
+                    i = GetMusic("crystalanthemums");
                     TerryMusicSystem.nowPlayingString = "Homestuck - Crystalanthemums";
                     break;
 
