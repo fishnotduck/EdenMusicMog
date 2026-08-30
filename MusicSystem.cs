@@ -67,12 +67,23 @@ namespace EdenMusicMog
 
                 case MusicID.WindyDay:
                     if (player.townNPCs > 2f)
-                        goto case MusicID.TownDay;
+                    {
+                        i = GetMusic("tosya");
+                        TerryMusicSystem.nowPlayingString = "Z.A.T.O. - Tosya";
+                        break;
+                    }
                     if (player.ZoneHallow)
-                        goto case MusicID.TheHallow;
-                    else 
-                        goto case MusicID.OverworldDay;
-                    break;
+                    {
+                        i = GetMusic("jokziozo");
+                        TerryMusicSystem.nowPlayingString = "corru.observer - JOKZI OZO";
+                        break;
+                    }
+                    else
+                    {
+                        i = GetMusic("thewoodsbehindherhouse");
+                        TerryMusicSystem.nowPlayingString = "Mesmalie - The Woods behind her house";
+                        break;
+                    }
 
                 case MusicID.Underground:
                 case MusicID.AltUnderground:
@@ -233,7 +244,7 @@ namespace EdenMusicMog
                     break;
 
                 case MusicID.SlimeRain:
-                    i = GetMusic("primarycolours");
+                    i = GetMusic("primarycolors");
                     TerryMusicSystem.nowPlayingString = "Brutal Orchestra - Primary Colours";
                     break;
 
