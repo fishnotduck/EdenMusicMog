@@ -1,107 +1,83 @@
 Replaces the music of vanilla and Fargo's Souls bosses, events and biomes. 
 Can be used without Fargo's Souls for only the vanilla tracks.
 
-Thank you Javyz!
+Thank you Javyz and Terry!
 
 Songs included:
-Town (Day): Blue Archive ~ OST 214
-Town (Night): Blue Archive ~ OST 198
-Overworld (Day): He Is Just Very Lucky ~ Trance Music For Racing Game
-Overworld (Day, alt): Blue Archive ~ Mischievous Step
-Overworld (Night): Persona 5 ~ Beneath the Mask
-Windy Day: Actual Literal Clown Music
-Windy Day (alt): Blue Archive ~ Foolish Days
-Underground: Kirby's Return to Dream Land ~ Slippery Steps
-Desert: Kirby 64 ~ Rock Star
-Snow / Ice: Kirby Air Ride ~ Frozen Hillside
-Jungle: Matt MVS ~ New Zelda Forest Temple Music (IT'S BRIN)
-Jungle (alt): Super Metroid ~ Brinstar
-The Hallow: Rabi-Ribi ~ Sky High Bridge
-Underground Hallow: Rabi-Ribi ~ Warp Destination
-Corruption: Super Paper Mario ~ World of Nothing
-Underground Corruption: Super Paper Mario ~ River Twygz Bed
-Crimson: Metroid Zero Mission ~ Tourian (Arranged by Kassil)
-Underground Crimson: Super Metroid ~ Tourian
-Ocean (Day): Plants vs Zombies ~ Watery Graves
-Ocean (Night): Metroid Fusion ~ Lower Sector 4 (Arranged by Kassil)
-Space: Sakuzyo ~ ShadyShady
-Space (alt): Rabi-Ribi ~ Aurora Palace
-Hell: DOOM Eternal ~ The Only Thing They Fear Is You
-Mushroom Biome: Blue Archive ~ After School Dessert
-Dungeon: Super Paper Mario ~ Castle Bleck
-Temple: Castlevania Symphony of the Night ~ Wandering Ghosts
-Rain: Rabi-Ribi ~ Unfamiliar Place
-Thunderstorm: Blue Archive ~ OST 202
-Graveyard: Blue Archive ~ Gestalt Angst
-Eerie: Blue Archive ~ Step of Terror
-Sandstorm: Blue Archive ~ Endless Carnival
-Aether: NieR ~ Song of the Ancients (Duet)
-Goblin Invasion: Zenless Zone Zero ~ Camellia Golden Week (Combat)
-Slime Rain: Blue Archive ~ Unwelcome School
-Pirate Invasion: Blue Archive ~ DAN! DAN!! INVADER!!!
-Eclipse: Raisi K. ~ The Battle (Theme of Thunderblunder777)
-Pumpkin Moon: HoloCure ~ Koyoi Wa Halloween Night!
-Frost Moon: Paper Mario The Thousand Year Door ~ Combat (Chapter 7)
-Old One's Army: Blue Archive ~ Operation DOTABATA
-Martian Madness: Rabi-Ribi ~ System Interior
-Credits: Blue Archive ~ Constant Moderato
+1 Town (Day): Z.A.T.O. - Tosya
+2 Town (Night): Mesmalie - Mesmer, Malady & Mirphie
+3 Overworld (Day): Mesmalie - The Woods behind her house
+4 Overworld (Night): Mesmalie - The Gloom inside the Woods behind her House
+5 Underground: Void Stranger - Void Symphony
+6 Cavern: Void Stranger - …ad astra
+7 Desert: ENA: Dream BBQ - Looking for the Boss (Reprise)
+8 Desert (underground): ENA: Dream BBQ - Main Menu Theme
+9 Snow: Homestuck - Moonsetter
+10 Snow (underground): Moonslammer by “Spoofymaru”
+11 Jungle: Homestuck - Crystalguitarthemums
+12 Jungle (underground): Homestuck - Crystalanthemums
+13 Hallow: corru.observer - Jokzi Ozo
+14 Corruption: corru.observer- Safe Surface
+15 Underground Corruption: corru.observer - Ambition
+16 Crimson: corru.observer - Outside Interference
+17 Underground Crimson: corru.observer - Inner World
+18 Ocean: corru.observer - The Hub
+19 Space: corru.observer - Breaking Free
+20 Hell: White Knuckle - Crematorium
+21 Mushroom Biome: glass beach - (rat castle)
+22 Dungeon: OFF - Unreasonable Behaviour
+23 Temple: Homestuck - Crystamanthequins
+24 Rain: Star Fetchers - Rain And Dust
+25 Thunderstorm: Set Yourself on Fire - Raindrops
+26 Graveyard: Serial Experiments Lain - Mist of a Different Dimension
+27 Blood Moon: OFF - Pepper Steak
+28 Meteor: Hylics - Ruins
+29 Sandstorm: Serial Experiments Lain - Pulse Beat
+30 Blizzard: MnSttR by “nonomino”
+31 Aether: Z.A.T.O. - Tightrope
+32 Goblin Invasion: Homestuck - Skaian Skirmish
+33 Slime Rain: Brutal Orchestra - Primary Colours
+34 Pirate Invasion: Star Fetchers - What if we
+35 Eclipse: Inscryption - A Final Duel
+36 Pumpkin Moon: The Battle Cats - Aku Battle Theme
+37 Frost Moon: OMORI - MERRY CD
+38 Old One's Army: The Battle Cats - Battle Theme #1
+39 Martian Madness: The Battle Cats - Into the Future Theme #2
+40 Credits: ZeroRanger - System Endless
 
-Trojan Squirrel: HoloCure ~ Suspect
-King Slime: Sakuzyo ~ rePrologue
-Eye of Cthulhu: Paper Mario The Thousand Year Door ~ X-Naut Fortress
-Cursed Coffin: Super Mario 64 ~ Shifting Sand Land
-Eater of Worlds: DM Dokuro ~ Last Battle (Ballos Mix)
-Brain of Cthulhu: Super Metroid ~ Mother Brain
-Queen Bee: Regnum Caelorum Et Gehenna ~ Verum Cur Non Audimus
-Skeletron: George Thorogood & The Destroyers ~ Bad to the Bone
-Deerclops: Jujutsu Kaisen ~ No Hesitation (Abridged)
-Devi: Blue Archive ~ Usagi Flap
-Wall of Flesh: Demetori ~ Necrofantasia
-Dreadnautilus: Blue Archive ~ Blood Stained Faith
-Queen Slime: Dedede's Drum Dash Deluxe ~ C-R-O-W-N-E-D
-Banished Baron: BREIS ~ X Vs Zero Decisive Battle 2
-Skeletron Prime: Blue Archive ~ PACHAD
-The Twins: Sound Ave ~ Storm Rider
-The Destroyer: Diverse System ~ Nightmare Paradise (Abridged)
-Lifelight: SEQUEL colony ~ Kizuato
-Plantera: Magia Record ~ Gekkasakuya
-Golem: UNDERTALE ~ MEGALOVANIA
-Betsy: Better Call Saul ~ Intro
-Duke Fishron: Megaman Zero ~ Cannon Ball (Mythos)
-Empress of Light: Touhou Perfect Cherry Blossom ~ Border of Life / Resurrection Butterfly
-Lunatic Cultist: Blue Archive ~ The Eruption
-Celestial Pillars: Blue Archive ~ Our Oath
-Moon Lord: Blue Archive ~ FURY OF SET
+41 Trojan Squirrel: Everhood - Vampires Invading Heaven
+42 King Slime: Brutal Orchestra - Swallowing the Sea
+43 Eye of Cthulhu: Brutal Orchestra - Wriggle and Writhe
+44 Cursed Coffin: Serial Experiments Lain - Free Zone
+45 Eater of Worlds: corru.observer - The Walls Are Trying To Kill Me
+46 Brain of Cthulhu: corru.observer - Hostile Rewrite
+47 Queen Bee: OMORI - Sweet Paralysis
+48 Skeletron: Mesmalie - THE RITUAL
+49 Deerclops: Brutal Orchestra - Three Storms Above the Mountain of Steam
+50 Deviantt: Outcore - Captain Tutorial
+51 Wall of Flesh: corru.observer - RUINOUS INTNT
+52 Dreadnautilus: Meaningless Random Numbers - MRNTRACK JOSH 1 B
+53 Queen Slime: Outcore - Big Bad Booty
+54 Banished Baron: ZeroRanger - Sky XXXX Days
+55 Skeletron Prime: corru.observer - Daemons
+56 The Twins: corru.observer - BSTRD
+57 The Destroyer: corru.observer - Impact
+58 Lifelight: Outcore - Waifu 4 Laifu
+*I’m sorry that this is the name of the song.
+59 Plantera: Everhood - Feisty Flowers
+60 Golem: Brutal Orchestra - Incubus Rising
+61 Dark Mage, Ogre, Betsy: The Battle Cats - Rush Theme
+62 Duke Fishron: Void Stranger - S** **** ****
+63 Empress of Light: OMORI - Tee-hee Time
+64 Lunatic Cultist: Hylics 2 - That’s a Big Stick
+65 Lunar Events: Hylics 2 - Look Ma, I Fly Now!
+*Plays for the entire duration that Lunar Events are active, overriding all biome themes, but not boss or event themes.
+66 Moon Lord: Hylics 2 - Fancy Meat Computer
 
-Timber Champion: HoloCure ~ Stardust Song
-Terra Champion: Castlevania Aria of Sorrow ~ Last Battle
-Nature Champion: Masahiro Aoki ~ Frostbite
-Life Champion: BlazBlue ~ conciliation
-Shadow Champion: Metroid Samus Returns ~ Proteus Ridley 3
-Earth Champion: Zenless Zone Zero ~ Pompey
-Spirit Champion: The Binding of Isaac ~ Sketches of Pain
-Will Champion: Mamoru-kun Wa Norowarete Shimatta! ~ Will Force
-Eridanus: Rabi-Ribi ~ Sudden Death
-Abomination: Project Wingman ~ Showdown
-Mutant: Kirby's Return to Dream Land Deluxe ~ Supreme Ruler's Coronation - OVERLORD
-Mutant (alt): Zenless Zone Zero ~ Battle Trials (Glory)
+67 All Champions: Serial Experiments Lain - Working Man’s Theme
+68 Eridanus: ZeroRanger - Despair
+69 Abominationn: A Hat in Time - Your Contract Has Expired
+70 Mutant: Void Stranger - Void the Sky
 
-Update V1.6.1.4
-- Why is the version so high????? idk its been forever since i touched this
-- Fixed Champ songs not working
-
-Update V1.0.1.17
--Add Copyright-Safe Mode
-
-Update V1.0.1.15
--Fix "Now Playing:" appearing with no song sometimes
-
-Update V1.0.1.12
--Fix Trojan Squirrel music not working
-
-Update V1.0.1.11
--Added boss music toggles
-
-Update V1.0.1.9
--Adjusted when Mutant's alt theme plays
--Added Immersive Mode
+71 Victory: Brutal Orchestra - Bosch’s Butt Song 
+*Plays for its runtime of 1 minute after a new boss or event is defeated for the first time.

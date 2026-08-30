@@ -53,6 +53,8 @@ namespace EdenMusicMog
 
         public static bool ZoneUnderground(this Player player) => player.ZoneDirtLayerHeight || player.ZoneRockLayerHeight;
 
+        public static bool ZoneCavern(this Player player) => player.ZoneRockLayerHeight || player.ZoneUnderworldHeight;
+
         public static bool BossMusicRange(this NPC npc)
         {
             int range = 5500;
@@ -69,7 +71,7 @@ namespace EdenMusicMog
                 NPCID.LunarTowerNebula,
                 NPCID.LunarTowerStardust,
             ];
-            return Main.npc.FirstOrDefault(npc => npc.active && pillarTypes.Contains(npc.type) && BossMusicRange(npc), null);
+            return Main.npc.FirstOrDefault(npc => npc.active && pillarTypes.Contains(npc.type), null);
         }
 
     }
@@ -864,142 +866,142 @@ namespace EdenMusicMog
     class TrojanSquirrel : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "HoloCureSuspect";
+        public override string MusicName => "vampiresinvadingheaven";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideTrojanSquirrelTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("TrojanSquirrel");
-        public override string DisplayMusicName => "HoloCure ~ Suspect";
+        public override string DisplayMusicName => "Everhood - Vampires Invading Heaven";
     }
 
     class KingSlime : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
-        public override string MusicName => MusicConfig.Instance.CopyrightMode ? "SupremeRulersCoronationOVERLORD" : "rePrologue";
+        public override string MusicName => "swallowingthesea";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideKingSlimeTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.KingSlime);
-        public override string DisplayMusicName => MusicConfig.Instance.CopyrightMode ? "Kirby RTDL Deluxe ~ Supreme Ruler's Coronation - OVERLORD" : "Sakuzyo ~ rePrologue";
+        public override string DisplayMusicName => "Brutal Orchestra - Swallowing the Sea";
     }
 
     class EyeOfCthulhu : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
-        public override string MusicName => "XNautFortress";
+        public override string MusicName => "wriggleandwrithe";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideEyeOfCthulhuTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.EyeofCthulhu);
-        public override string DisplayMusicName => "Paper Mario TTYD ~ X-Naut Fortress";
+        public override string DisplayMusicName => "Brutal Orchestra - Wriggle and Writhe";
     }
 
     class CursedCoffin : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "ShiftingSandLand";
+        public override string MusicName => "freezone";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideCursedCoffinTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("CursedCoffin");
-        public override string DisplayMusicName => "Super Mario 64 ~ Shifting Sand Land";
+        public override string DisplayMusicName => "Serial Experiments Lain - Free Zone";
     }
 
     class EaterOfWorlds : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
-        public override string MusicName => "LastBattleBallosMix";
+        public override string MusicName => "thewallsaretryingtokillme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideEaterOfWorldsTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.EaterofWorldsHead);
-        public override string DisplayMusicName => "DM Dokuro ~ Last Battle (Ballos Mix)";
+        public override string DisplayMusicName => "corru.observer - The Walls Are Trying To Kill Me";
     }
 
     class Brain : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
-        public override string MusicName => "MotherBrain";
+        public override string MusicName => "hostilerewrite";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideBrainOfCthulhuTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.BrainofCthulhu);
-        public override string DisplayMusicName => "Super Metroid ~ Mother Brain";
+        public override string DisplayMusicName => "corru.observer - Hostile Rewrite";
     }
 
     class QueenBee : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
-        public override string MusicName => "RegnumCaelorumEtGehennaVerumCurNonAudimus";
+        public override string MusicName => "sweetparalysis";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideQueenBeeTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.QueenBee);
-        public override string DisplayMusicName => "Regnum Caelorum Et Gehenna ~ Verum Cur Non Audimus";
+        public override string DisplayMusicName => "OMORI - Sweet Paralysis";
     }
 
     class Skeletron : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
-        public override string MusicName => "BadToTheBone";
+        public override string MusicName => "theritual";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideSkeletronTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.SkeletronHead);
-        public override string DisplayMusicName => "George Thorogood ~ Bad to the Bone";
+        public override string DisplayMusicName => "Mesmalie - THE RITUAL";
     }
 
     class Deerclops : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
-        public override string MusicName => "NoHesitation";
+        public override string MusicName => "threestormsabovethemountainofsteam";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideDeerclopsTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.Deerclops);
-        public override string DisplayMusicName => "Jujutsu Kaisen ~ No Hesitation (Abridged)";
+        public override string DisplayMusicName => "Brutal Orchestra - Three Storms Above the Mountain of Steam";
     }
 
     class Devi : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
-        public override string MusicName => "UsagiFlap";
+        public override string MusicName => "captaintutorial";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideDevianttTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("DeviBoss");
-        public override string DisplayMusicName => "Blue Archive ~ Usagi Flap";
+        public override string DisplayMusicName => "Outcore - Captain Tutorial";
     }
 
     class WallOfFlesh : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
-        public override string MusicName => "DemetoriNecrofantasia";
+        public override string MusicName => "ruinousintnt";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideWallOfFleshTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.WallofFlesh);
-        public override string DisplayMusicName => "Demetori ~ Necrofantasia";
+        public override string DisplayMusicName => "corru.observer - RUINOUS INTNT";
     }
 
     class Dreadnautilus : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
-        public override string MusicName => "BloodStainedFaith";
+        public override string MusicName => "mrntrackjosh1b";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideDreadnautilusTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.BloodNautilus);
-        public override string DisplayMusicName => "Blue Archive ~ Blood Stained Faith";
+        public override string DisplayMusicName => "Meaningless Random Numbers - MRNTRACK JOSH 1 B";
     }
 
     class QueenSlime : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
-        public override string MusicName => "DededeDrumDashDeluxeCROWNED";
+        public override string MusicName => "bigbadbooty";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideQueenSlimeTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.QueenSlimeBoss);
-        public override string DisplayMusicName => "Dedede's Drum Dash Deluxe ~ C-R-O-W-N-E-D";
+        public override string DisplayMusicName => "Outcore - Big Bad Booty";
     }
 
     class Baron : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "BREISXVsZeroDecisiveBattle2";
+        public override string MusicName => "skyxxxxdays";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideBanishedBaronTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("BanishedBaron");
-        public override string DisplayMusicName => "BREIS ~ X Vs Zero Decisive Battle 2";
+        public override string DisplayMusicName => "ZeroRanger - Sky XXXX Days";
     }
 
     class SkeletronPrime : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "PACHAD";
+        public override string MusicName => "daemons";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideSkeletronPrimeTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.SkeletronPrime);
-        public override string DisplayMusicName => "Blue Archive ~ PACHAD";
+        public override string DisplayMusicName => "corru.observer - Daemons";
     }
 
     class Twins : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "SoundAveStormRider";
+        public override string MusicName => "bstrd";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideTwinsTheme;
         public override NPC TryGetActiveNPC
         {
@@ -1010,208 +1012,214 @@ namespace EdenMusicMog
                 return reti ?? spaz;
             }
         }
-        public override string DisplayMusicName => "Sound Ave ~ Storm Rider";
+        public override string DisplayMusicName => "corru.observer - BSTRD";
     }
 
     class Destroyer : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "DiverseSystemNightmareParadiseAbridged";
+        public override string MusicName => "impact";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideDestroyerTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.TheDestroyer);
-        public override string DisplayMusicName => "Diverse System ~ Nightmare Paradise (Abridged)";
+        public override string DisplayMusicName => "corru.observer - Impact";
     }
 
     class Lifelight : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
-        public override string MusicName => "SEQUELcolonyKizuato";
+        public override string MusicName => "waifu4laifu";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideLifelightTheme && MusicUtils.Souls != null;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss(
             MusicUtils.Souls.Version >= Version.Parse("1.8") ? "Lifelight" : "LifeChallenger");
-        public override string DisplayMusicName => "SEQUEL colony ~ Kizuato";
+        public override string DisplayMusicName => "Outcore - Waifu 4 Laifu";
     }
 
     class Plantera : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "Gekkasakuya";
+        public override string MusicName => "feistyflowers";
         public override bool MyMusicConfig => MusicConfig.Instance.OverridePlanteraTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.Plantera);
-        public override string DisplayMusicName => "Magia Record ~ Gekkasakuya";
+        public override string DisplayMusicName => "Everhood - Feisty Flowers";
     }
 
     class Golem : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
-        public override string MusicName => "MEGALOVANIA";
+        public override string MusicName => "incubusrising";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideGolemTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.Golem);
-        public override string DisplayMusicName => "UNDERTALE ~ MEGALOVANIA";
+        public override string DisplayMusicName => "Brutal Orchestra - Incubus Rising";
     }
 
-    class Betsy : MusicEffect
+    class OOABoss : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
-        public override string MusicName => "BetterCallSaul";
+        public override string MusicName => "rushtheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideBetsyTheme;
-        public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.DD2Betsy);
-        public override string DisplayMusicName => "Better Call Saul ~ Intro";
+        public override NPC TryGetActiveNPC
+        {
+            get
+            {
+                var darkmage = MusicUtils.FindClosestBoss(NPCID.DD2DarkMageT1);
+                var ogre = MusicUtils.FindClosestBoss(NPCID.DD2OgreT2);
+                var betsy = MusicUtils.FindClosestBoss(NPCID.DD2Betsy);
+                return darkmage ?? ogre ?? betsy;
+            }
+        }
+        public override string DisplayMusicName => "The Battle Cats - Rush Theme";
     }
 
     class Fishron : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
-        public override string MusicName => "CannonBallMythos";
+        public override string MusicName => "skybluedays";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideDukeFishronTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.DukeFishron);
-        public override string DisplayMusicName => "Megaman Zero ~ Cannon Ball (Mythos)";
+        public override string DisplayMusicName => "Void Stranger - S** **** ****";
     }
 
     class EmpressofLight : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
-        public override string MusicName => "BorderOfLifeResurrectionButterfly";
+        public override string MusicName => "teeheetime";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideEmpressOfLightTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.HallowBoss);
-        public override string DisplayMusicName => "Touhou PCB ~ Border of Life / Resurrection Butterfly";
+        public override string DisplayMusicName => "OMORI - Tee-hee Time";
     }
 
     class Cultist : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossLow;
-        public override string MusicName => "Chokmah232";
+        public override string MusicName => "thatsabigstick";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideLunaticCultistTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.CultistBoss);
-        public override string DisplayMusicName => "Blue Archive ~ The Eruption";
+        public override string DisplayMusicName => "Hylics 2 - That's a Big Stick";
     }
 
     class Pillars : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "OurOath";
+        public override string MusicName => "lookmaiflynow";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideLunarPillarsTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FirstPillarInRange();
-        public override string DisplayMusicName => "Blue Archive ~ Our Oath";
+        public override string DisplayMusicName => "Hylics 2 - Look Ma, I Fly Now!";
     }
 
     class MoonLord : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
-        public override string MusicName => "FuryOfSet";
+        public override string MusicName => "fancymeatcomputer";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideMoonLordTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestBoss(NPCID.MoonLordCore);
-        public override string DisplayMusicName => "Blue Archive ~ FURY OF SET";
+        public override string DisplayMusicName => "Hylics 2 - Fancy Meat Computer";
     }
 
     class TimberChampion : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "StardustSong";
+        public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideTimberChampionTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("TimberChampion");
-        public override string DisplayMusicName => "HoloCure ~ Stardust Song";
+        public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
     class TimberChampionHead : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "StardustSong";
+        public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideTimberChampionTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("TimberChampionHead");
-        public override string DisplayMusicName => "HoloCure ~ Stardust Song";
+        public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
 
     class TerraChampion : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "AriaLastBattle";
+        public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideTerraChampionTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("TerraChampion");
-        public override string DisplayMusicName => "Castlevania Aria of Sorrow ~ Last Battle";
+        public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
 
     class NatureChampion : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "MasahiroAokiFrostbite";
+        public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideNatureChampionTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("NatureChampion");
-        public override string DisplayMusicName => "Masahiro Aoki ~ Frostbite";
+        public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
 
     class LifeChampion : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "conciliation";
+        public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideLifeChampionTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("LifeChampion");
-        public override string DisplayMusicName => "BlazBlue ~ conciliation";
+        public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
 
     class ShadowChampion : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "ProteusRidley3";
+        public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideShadowChampionTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("ShadowChampion");
-        public override string DisplayMusicName => "Metroid Samus Returns ~ Proteus Ridley 3";
+        public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
 
     class EarthChampion : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "Pompey";
+        public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideEarthChampionTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("EarthChampion");
-        public override string DisplayMusicName => "Zenless Zone Zero ~ Pompey";
+        public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
 
     class SpiritChampion : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "SketchesOfPain";
+        public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideSpiritChampionTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("SpiritChampion");
-        public override string DisplayMusicName => "The Binding of Isaac ~ Sketches of Pain";
+        public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
 
     class WillChampion : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
-        public override string MusicName => "MamoruKunHasBeenCursedWillForce";
+        public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideWillChampionTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("WillChampion");
-        public override string DisplayMusicName => "Mamoru-kun Wa Norowarete Shimatta! ~ Will Force";
+        public override string DisplayMusicName => "Serial Experiments Lain - Working Man's Theme";
     }
 
     class Eridanus : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
-        public override string MusicName => "SuddenDeath";
+        public override string MusicName => "despair";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideEridanusTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("CosmosChampion");
-        public override string DisplayMusicName => "Rabi-Ribi ~ Sudden Death";
+        public override string DisplayMusicName => "ZeroRanger - Despair";
     }
 
     class Abom : MusicEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
-        public override string MusicName => "Showdown";
+        public override string MusicName => "yourcontracthasexpired";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideAbominationnTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("AbomBoss");
-        public override string DisplayMusicName => "Project Wingman ~ Showdown";
+        public override string DisplayMusicName => "A Hat in Time - Your Contract Has Expired";
     }
 
     class Mutant : MusicEffect
     {
-        public override SceneEffectPriority Priority => (SceneEffectPriority)9;
-        private bool useAltMusic => MusicConfig.Instance.MutantFtwZzz &&
-            (MusicUtils.Souls.Version >= Version.Parse("1.8") ? (bool)MusicUtils.Souls.Call("MasochistMode") : Main.getGoodWorld);
-        public override string MusicName => useAltMusic ? "BattleTrialsGlory" : "SupremeRulersCoronationOVERLORD";
-        public override bool MyMusicConfig => (MusicUtils.Souls != null) && (MusicConfig.Instance.OverrideMutantTheme || useAltMusic);
+        public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
+        public override string MusicName => "voidthesky";
+        public override bool MyMusicConfig => MusicConfig.Instance.OverrideMutantTheme;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("MutantBoss");
-        public override string DisplayMusicName =>
-            useAltMusic ? "Zenless Zone Zero ~ Battle Trials (Glory)" : "Kirby RTDL Deluxe ~ Supreme Ruler's Coronation - OVERLORD";
+        public override string DisplayMusicName => "Void Stranger - Void the Sky";
     }
     #endregion
 }
