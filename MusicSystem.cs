@@ -9,11 +9,11 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace TerryMusicMod
+namespace EdenMusicMog
 {
     public class MusicSystem : ModSystem
     {
-        public static int GetMusic(string name) => MusicLoader.GetMusicSlot(TerryMusicMod.Instance, $"Music/{name}");
+        public static int GetMusic(string name) => MusicLoader.GetMusicSlot(EdenMusicMog.Instance, $"Music/{name}");
 
         private const BindingFlags UniversalBindingFlags = BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic;
         public override void Load()
@@ -321,9 +321,9 @@ namespace TerryMusicMod
                     TerryMusicSystem.nowPlayingString = "Blue Archive ~ Constant Moderato";
                     break;
             }
-            if (TerryMusicMod.Instance.moddedMusicDict.ContainsKey(i))
+            if (EdenMusicMog.Instance.moddedMusicDict.ContainsKey(i))
             {
-                var tuple = TerryMusicMod.Instance.moddedMusicDict[i];
+                var tuple = EdenMusicMog.Instance.moddedMusicDict[i];
                 //Main.NewText($"get! {i} {tuple.ToString()}");
                 i = GetMusic(tuple.Item1);
                 TerryMusicSystem.nowPlayingString = tuple.Item2;
@@ -331,7 +331,7 @@ namespace TerryMusicMod
             // Special-case combined Champions music slot
             // Detect active champion NPCs directly
             // and map to the matching internal music slot.
-            if (MusicUtils.Souls != null && TerryMusicMod.Instance.ChampionsSlot != 0 && i == TerryMusicMod.Instance.ChampionsSlot)
+            if (MusicUtils.Souls != null && EdenMusicMog.Instance.ChampionsSlot != 0 && i == EdenMusicMog.Instance.ChampionsSlot)
             {
                 i = GetMusic("StardustSong");
                 if (MusicUtils.FindClosestSoulsBoss("TimberChampion") != null || MusicUtils.FindClosestSoulsBoss("TimberChampionHead") != null)

@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using Terraria.ModLoader;
 
-namespace TerryMusicMod
+namespace EdenMusicMog
 {
-	public class TerryMusicMod : Mod
+	public class EdenMusicMog : Mod
 	{
-		internal static TerryMusicMod Instance;
+		internal static EdenMusicMog Instance;
         public int ChampionsSlot = 0;
 		public override void Load()
 		{

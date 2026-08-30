@@ -2,7 +2,7 @@
 using Terraria.ModLoader.Config;
 using Terraria.ModLoader;
 
-namespace TerryMusicMod
+namespace EdenMusicMog
 {
     public class MusicConfig : ModConfig
     {
@@ -29,7 +29,7 @@ namespace TerryMusicMod
         [DefaultValue(true)]
         public bool CopyrightMode;
 
-        [Header("$Mods.TerryMusicMod.Configs.MusicConfig.Headers.VanillaMusicOverrides")]
+        [Header("$Mods.EdenMusicMog.Configs.MusicConfig.Headers.VanillaMusicOverrides")]
 
         [DefaultValue(true)]
         public bool OverrideKingSlimeTheme
@@ -216,7 +216,7 @@ namespace TerryMusicMod
             }
         }
 
-        [Header("$Mods.TerryMusicMod.Configs.MusicConfig.Headers.SoulsMusicOverrides")]
+        [Header("$Mods.EdenMusicMog.Configs.MusicConfig.Headers.SoulsMusicOverrides")]
 
         [DefaultValue(true)]
         public bool OverrideTrojanSquirrelTheme

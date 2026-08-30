@@ -8,7 +8,7 @@ using static Terraria.Main;
 using Microsoft.CodeAnalysis;
 using System;
 
-namespace TerryMusicMod
+namespace EdenMusicMog
 {
     static class MusicUtils
     {

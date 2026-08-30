@@ -6,7 +6,7 @@
     }
   ],
   "settings": {
-    "dotnet.defaultSolution": "TerryMusicMod.sln",
+    "dotnet.defaultSolution": "EdenMusicMog.sln",
     "files.exclude": {
       "**/bin": true,
       "**/obj": true

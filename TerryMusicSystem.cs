@@ -2,9 +2,9 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.UI;
-using TerryMusicMod.UI;
+using EdenMusicMog.UI;
 
-namespace TerryMusicMod
+namespace EdenMusicMog
 {
 	public class TerryMusicSystem : ModSystem
 	{
