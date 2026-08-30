@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "bItWnXqY6s4=",
+  "dgSpecHash": "lmu6kKaSAOI=",
   "success": true,
-  "projectFilePath": "/home/darrchiu/.local/share/Terraria/tModLoader/ModSources/TerryMusicMod/TerryMusicMod.csproj",
+  "projectFilePath": "C:\\Users\\Eden\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\EdenMusicMog\\EdenMusicMog.csproj",
   "expectedPackageFiles": [
-    "/home/darrchiu/.nuget/packages/tmodloader.codeassist/0.1.5/tmodloader.codeassist.0.1.5.nupkg.sha512"
+    "C:\\Users\\Eden\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512",
+    "C:\\Users\\Eden\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.30\\microsoft.windowsdesktop.app.ref.8.0.30.nupkg.sha512",
+    "C:\\Users\\Eden\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.30\\microsoft.netcore.app.ref.8.0.30.nupkg.sha512",
+    "C:\\Users\\Eden\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.30\\microsoft.aspnetcore.app.ref.8.0.30.nupkg.sha512"
   ],
   "logs": []
 }

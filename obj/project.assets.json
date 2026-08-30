@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
     "net8.0": {
       "tModLoader.CodeAssist/0.1.5": {
@@ -31,28 +31,31 @@
     ]
   },
   "packageFolders": {
-    "/home/darrchiu/.nuget/packages/": {}
+    "C:\\Users\\Eden\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/darrchiu/.local/share/Terraria/tModLoader/ModSources/TerryMusicMod/TerryMusicMod.csproj",
+      "projectUniqueName": "C:\\Users\\Eden\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\EdenMusicMog\\EdenMusicMog.csproj",
       "projectName": "TerryMusicMod",
-      "projectPath": "/home/darrchiu/.local/share/Terraria/tModLoader/ModSources/TerryMusicMod/TerryMusicMod.csproj",
-      "packagesPath": "/home/darrchiu/.nuget/packages/",
-      "outputPath": "/home/darrchiu/.local/share/Terraria/tModLoader/ModSources/TerryMusicMod/obj/",
+      "projectPath": "C:\\Users\\Eden\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\EdenMusicMog\\EdenMusicMog.csproj",
+      "packagesPath": "C:\\Users\\Eden\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Eden\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\EdenMusicMog\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/darrchiu/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Eden\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {}
         }
@@ -66,10 +69,12 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "10.0.400"
     },
     "frameworks": {
       "net8.0": {
+        "framework": "net8.0",
         "targetAlias": "net8.0",
         "dependencies": {
           "tModLoader.CodeAssist": {
@@ -88,12 +93,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.30, 8.0.30]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.30, 8.0.30]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.30, 8.0.30]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/sdk/dotnet8/lib/sdk/8.0.422/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
