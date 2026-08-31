@@ -66,7 +66,7 @@ Songs included:
 *I’m sorry that this is the name of the song.
 59 Plantera: Everhood - Feisty Flowers
 60 Golem: Brutal Orchestra - Incubus Rising
-61 Dark Mage, Ogre, Betsy: The Battle Cats - Rush Theme
+61 Betsy: The Battle Cats - Rush Theme
 62 Duke Fishron: Void Stranger - S** **** ****
 63 Empress of Light: OMORI - Tee-hee Time
 64 Lunatic Cultist: Hylics 2 - That’s a Big Stick
@@ -80,4 +80,4 @@ Songs included:
 70 Mutant: Void Stranger - Void the Sky
 
 71 Victory: Brutal Orchestra - Bosch’s Butt Song 
-*Plays for its runtime of 1 minute after a new boss or event is defeated for the first time.
+*Plays for its runtime of 1 minute, 13 seconds after a new boss or event is defeated for the first time.

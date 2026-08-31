@@ -249,6 +249,12 @@ namespace EdenMusicMog
         }
 
         [DefaultValue(true)]
+        public bool WhoppaButtMode
+        {
+            get; set;
+        }
+
+        [DefaultValue(true)]
         public bool ToggleAllSoulsMusicOverrides
         {
             get

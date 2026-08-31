@@ -31,6 +31,13 @@ namespace EdenMusicMog
 
             Player player = Main.LocalPlayer;
 
+            if (ButtSystem.Playing && MusicConfig.Instance.WhoppaButtMode)
+            {
+                int buttSlot = ButtSystem.ButtSlot;
+                if (buttSlot < Main.musicFade.Length)
+                    return buttSlot;
+            }
+
             if (NPC.LunarApocalypseIsUp)
             {
                 int old2 = i;
@@ -56,6 +63,7 @@ namespace EdenMusicMog
                     break;
 
                 case MusicID.OverworldDay:
+                case MusicID.AltOverworldDay:
                     i = GetMusic("thewoodsbehindherhouse");
                     TerryMusicSystem.nowPlayingString = "Mesmalie - The Woods behind her house";
                     break;

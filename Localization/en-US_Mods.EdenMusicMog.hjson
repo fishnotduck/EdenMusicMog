@@ -123,7 +123,7 @@ Configs: {
 		}
 
 		OverrideBetsyTheme: {
-			Label: Override OOA Boss Themes
+			Label: Override Betsy Theme
 			Tooltip: If enabled, plays The Battle Cats - Rush Theme.
 		}
 
@@ -180,6 +180,11 @@ Configs: {
 		ToggleAllSoulsMusicOverrides: {
 			Tooltip: Enabling this will enable all Souls music overrides
 			Label: Toggle All Souls Music Overrides
+		}
+
+		WhoppaButtMode: {
+			Label: Victory Theme
+			Tooltip: Enabling this will cause Brutal Orchestra - Bosch's Butt Song to play whenever a boss is defeated for the first time.
 		}
 	}
 

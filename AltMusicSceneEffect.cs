@@ -1050,10 +1050,8 @@ namespace EdenMusicMog
         {
             get
             {
-                var darkmage = MusicUtils.FindClosestBoss(NPCID.DD2DarkMageT1);
-                var ogre = MusicUtils.FindClosestBoss(NPCID.DD2OgreT2);
                 var betsy = MusicUtils.FindClosestBoss(NPCID.DD2Betsy);
-                return darkmage ?? ogre ?? betsy;
+                return betsy;
             }
         }
         public override string DisplayMusicName => "The Battle Cats - Rush Theme";
@@ -1097,7 +1095,7 @@ namespace EdenMusicMog
 
     class TimberChampion : MusicEffect
     {
-        public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
+        public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
         public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("TimberChampion");
@@ -1105,7 +1103,7 @@ namespace EdenMusicMog
     }
     class TimberChampionHead : MusicEffect
     {
-        public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
+        public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
         public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("TimberChampionHead");
@@ -1114,7 +1112,7 @@ namespace EdenMusicMog
 
     class TerraChampion : MusicEffect
     {
-        public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
+        public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
         public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("TerraChampion");
@@ -1123,7 +1121,7 @@ namespace EdenMusicMog
 
     class NatureChampion : MusicEffect
     {
-        public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
+        public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
         public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("NatureChampion");
@@ -1132,7 +1130,7 @@ namespace EdenMusicMog
 
     class LifeChampion : MusicEffect
     {
-        public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
+        public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
         public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("LifeChampion");
@@ -1141,7 +1139,7 @@ namespace EdenMusicMog
 
     class ShadowChampion : MusicEffect
     {
-        public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
+        public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
         public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("ShadowChampion");
@@ -1150,7 +1148,7 @@ namespace EdenMusicMog
 
     class EarthChampion : MusicEffect
     {
-        public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
+        public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
         public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("EarthChampion");
@@ -1159,7 +1157,7 @@ namespace EdenMusicMog
 
     class SpiritChampion : MusicEffect
     {
-        public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
+        public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
         public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("SpiritChampion");
@@ -1168,7 +1166,7 @@ namespace EdenMusicMog
 
     class WillChampion : MusicEffect
     {
-        public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
+        public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
         public override string MusicName => "workingmanstheme";
         public override bool MyMusicConfig => MusicConfig.Instance.OverrideChampionThemes;
         public override NPC TryGetActiveNPC => MusicUtils.FindClosestSoulsBoss("WillChampion");
